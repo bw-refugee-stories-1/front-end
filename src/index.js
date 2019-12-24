@@ -5,7 +5,7 @@ import { createStore, /* compose, applyMiddleware */ } from 'redux';
 import { Provider } from 'react-redux';
 import allReducers from './reducers';
 
-import './index.css';
+import './index.scss';
 import App from './App';
 
 // TODO: Add devtools extension
