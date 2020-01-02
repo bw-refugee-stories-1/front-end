@@ -1,4 +1,11 @@
 import React from "react";
+import Caro from "./Carousel";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
-
-// carousel 3 pics; decide on grid of  
+export default function HomePage() {
+  return (
+    <div className="homePage">
+      <Caro />
+    </div>
+  );
+}
