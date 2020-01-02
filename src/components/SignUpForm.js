@@ -51,6 +51,15 @@ const NewUserForm = ({ values, errors, touched, status }) => {
         </label>
         <button type="submit">Sign Up</button>
       </Form>
+      {/* use this to map users and print them in a list */}
+      {/* {users.map(user => {
+        return (
+          <ul key={user.id}>
+            <li>Name: {user.name}</li>
+            <li>Email: {user.email}</li>
+          </ul>
+        );
+      })} */}
     </div>
   );
 };
