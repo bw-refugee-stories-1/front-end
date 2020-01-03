@@ -17,6 +17,7 @@ const NewUserForm = ({ values, errors, touched, status }) => {
 
   return (
     <div className="new-user-form">
+      <h4>Admin Sign Up</h4>
       <Form>
         <label htmlFor="name">
           Name
@@ -38,7 +39,7 @@ const NewUserForm = ({ values, errors, touched, status }) => {
             id="password"
             type="text"
             name="password"
-            placeholder="password"
+            placeholder="Password"
           />
           {touched.password && errors.password && (
             <p className="errors">{errors.password}</p>
@@ -79,7 +80,7 @@ const FormikSignUpForm = withFormik({
   validationSchema: Yup.object().shape({
     name: Yup.string().required("Name is Required"),
     email: Yup.string()
-      .email("Invalid email")
+      .email()
       .required("Email is required"),
     password: Yup.string()
       .min(8)
@@ -92,7 +93,7 @@ const FormikSignUpForm = withFormik({
     axios
       .post("https://reqres.in/api/users", values)
       .then(response => {
-        console.log(response);
+        console.log("success", response);
         //sends a status update through props in NewUserForm with value as response.data content
         setStatus(response.data);
 

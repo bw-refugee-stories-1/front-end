@@ -21,12 +21,8 @@ function App() {
         <NavLink to="/login">Login</NavLink>
       </header>
       <h1>Refugee Stories</h1>
-
-      <HomePage />
-
-      <SignUpForm />
-
-      <LoginForm />
+        <SignUpForm />
+      
 
       {/* Add routes here */}
     </div>
