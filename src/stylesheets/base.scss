@@ -43,8 +43,8 @@ h5 {
 // Working with styles for the SignUpForm below:
 
 button {
-  background-color: #e5e4e4;
-  color: #505050;
+  background-color: #17644a;
+  color: #fff;
   border-radius: 10px;
   width: 164px;
   height: 44px;
@@ -62,10 +62,6 @@ button:active {
 }
 
 .admin-login {
-  
-}
-
-.new-user-form {
   display: flex;
   flex-direction: column;
   width: 500px;
