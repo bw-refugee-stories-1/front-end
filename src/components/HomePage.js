@@ -1,4 +1,10 @@
 import React from "react";
 
+const HomePage = props => {
+  return (
+    <h1>Home Page</h1>
+  )
 
-// carousel 3 pics; decide on grid of  
+}
+
+export default HomePage;

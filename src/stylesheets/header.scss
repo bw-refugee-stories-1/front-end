@@ -13,6 +13,20 @@ header {
   background: $greenpea;
   color: white; // TODO: Figma calls for low-contrast black.
 
+  a {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  a:active {
+    color: white;
+  }
+
+  a:hover {
+    color: white;
+  }
+
   p {
     padding: 0 1.5rem;
   }
