@@ -4,10 +4,10 @@ header {
   top: 0px;
   height: 5rem;
   width: 100vw;
-  
+
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   background: $greenpea;
@@ -19,9 +19,7 @@ header {
 }
 
 nav {
-
   @media screen and (max-width: $small) {
     // Add hamburger menu
   }
-
 }

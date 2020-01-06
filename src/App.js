@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch, NavLink } from "react-router-dom";
-import SignUpForm from "./components/SignUpForm";
 import HomePage from "./components/HomePage";
 import LoginForm from "./components/LoginForm";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,8 +20,14 @@ function App() {
         <NavLink to="/login">Login</NavLink>
       </header>
       <h1>Refugee Stories</h1>
-        <SignUpForm />
-      
+      <Switch>
+        <Route path="/login">
+          <LoginForm />
+        </Route>
+        <Route path="/">
+          <HomePage />
+        </Route>
+      </Switch>
 
       {/* Add routes here */}
     </div>
