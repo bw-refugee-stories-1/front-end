@@ -1,8 +1,13 @@
 import React from "react";
+import Caro from "./Carousel";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const HomePage = props => {
   return (
-    <h1>Home Page</h1>
+    <div className="homePage">
+      <h1>Home Page</h1>
+      <Caro />
+  </div>
   )
 
 }
