@@ -122,14 +122,14 @@ const AdminLogin = () => {
       .then(response => {
         console.log("success", response);
       })
-      .catch(error => console.log(error.response));
+      .catch(error => console.log("Error: ", error.response));
   }
 
   return (
     <form className="admin-login" onSubmit={handleSubmit(handleLogin)}>
-      <label htmlFor="email">Email: </label>
+      <label htmlFor="username">Email: </label>
       <input
-        name="email"
+        name="username"
         ref={register({
           required: "Required",
           pattern: {
