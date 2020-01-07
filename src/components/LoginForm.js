@@ -11,40 +11,40 @@ import {
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-class loginform extends Component {
-  render() {
-    return (
-      <Container className="App">
-        <h2>Sign In</h2>
-        <Form className="form">
-          <Col>
-            <FormGroup>
-              <Label>Email</Label>
-              <Input
-                type="email"
-                name="email"
-                id="exampleEmail"
-                placeholder="myemail@email.com"
-              />
-            </FormGroup>
-          </Col>
-          <Col>
-            <FormGroup>
-              <Label for="examplePassword">Password</Label>
-              <Input
-                type="password"
-                name="password"
-                id="examplePassword"
-                placeholder="********"
-              />
-            </FormGroup>
-          </Col>
-          <Button>Submit</Button>
-        </Form>
-      </Container>
-    );
-  }
-}
+// class loginform extends Component {
+//   render() {
+//     return (
+//       <Container className="App">
+//         <h2>Sign In</h2>
+//         <Form className="form">
+//           <Col>
+//             <FormGroup>
+//               <Label>Email</Label>
+//               <Input
+//                 type="email"
+//                 name="email"
+//                 id="exampleEmail"
+//                 placeholder="myemail@email.com"
+//               />
+//             </FormGroup>
+//           </Col>
+//           <Col>
+//             <FormGroup>
+//               <Label for="examplePassword">Password</Label>
+//               <Input
+//                 type="password"
+//                 name="password"
+//                 id="examplePassword"
+//                 placeholder="********"
+//               />
+//             </FormGroup>
+//           </Col>
+//           <Button>Submit</Button>
+//         </Form>
+//       </Container>
+//     );
+//   }
+// }
 
 // import React from 'react';
 // import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
@@ -129,9 +129,9 @@ const AdminLogin = () => {
 
   return (
     <form className="admin-login" onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="email">Email: </label>
+      <label htmlFor="username">Email: </label>
       <input
-        name="email"
+        name="username"
         ref={register({
           required: "Required",
           pattern: {
