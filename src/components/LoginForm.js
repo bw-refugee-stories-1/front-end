@@ -122,7 +122,7 @@ const AdminLogin = () => {
       .then(response => {
         console.log("success", response);
       })
-      .catch(error => console.log(error.response));
+      .catch(error => console.log("Error: ", error.response));
   }
 
   return (
