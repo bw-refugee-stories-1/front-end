@@ -52,9 +52,9 @@ export const rejectStory = id => dispatch => {
     .catch(err => console.log('Error from deleteStory: ', err))
 }
 
-
+// TODO: Move to new component
 // stories.map( story => {
-//   <ApproveStoryCard story={story}/>
+//   <ReviewStoryCard story={story}/>
 // })
 
 // const [story, setStory] = useState(props.story)
