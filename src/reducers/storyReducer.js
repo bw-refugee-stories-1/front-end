@@ -31,14 +31,34 @@ export const storyReducer = (state = initialState, action) => {
         isFetching: false,
         error: action.payload
       }
+    case ADD_STORY:
+      return {
+        ...state,
+        stories: [...stories, action.payload]
+      }
+    case APPROVE_STORY:
+      return {
+        ...state,
+        stories: stories.map( story => {
+          return story.id === action.payload.id ? action.payload : story;
+        })
+      }
+    case REJECT_STORY:
+      return {
+        ...state,
+        stories: stories.filter( story => {
+          return story.id !== action.payload
+        })
+      }
   }
 }
 
-const story = {
-  name: '',
-  email: '',
-  title: '',
-  text: '',
-  id: '',
-  approved: false,
-}
+// const story = {
+//   author: '', //optional
+//   email: '',
+//   title: '', //optional
+//   text: '',
+//   id: '',
+//   approved: false,
+// }
+
