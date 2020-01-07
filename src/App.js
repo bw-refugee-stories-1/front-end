@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Private from './components/PrivateRoute';
 
-// import HomePage from "./components/HomePage";
 // import LoginForm from "./components/LoginForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -11,10 +10,8 @@ import About from './components/About';
 import Contact from './components/Contact.js';
 import Login from './components/Login';
 import Signup from './components/Signup';
-
-// TODO: Decide whether or not a user needs to login to submit a story;
-// Anyone can read the stories; Admin is only one at this time that needs
-// to login in and decide whether or not to approve or reject a story;
+import HomePage from './components/HomePage';
+import StoryRequests from './components/StoryRequests';
 
 function App() {
   return (
@@ -26,11 +23,12 @@ function App() {
       <h1>Refugee Stories</h1>
       { /* Default to list of stories, not: <SignUpForm /> */ }
       <Switch>
-        <Private path="/about" component={About} />
-        <Private path="/contact" component={Contact} />
-        <Private path="/login" component={Login} />
+        <Private path="/requests" component={StoryRequests} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route path="/" component={Login} /> {/* HomePage */}
+        <Route path="/" component={HomePage} /> {/* HomePage */}
       </Switch>
       
     </div>
