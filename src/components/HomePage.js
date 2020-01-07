@@ -5,8 +5,8 @@ import Caro from "./Carousel";
 const HomePage = props => {
   return (
     <div className="homePage">
-      <h1>Home Page</h1>
       <Caro />
+      <h1>Home Page</h1>
   </div>
   )
 
