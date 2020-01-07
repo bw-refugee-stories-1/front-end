@@ -9,7 +9,8 @@ import {
   Button
 } from "reactstrap";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+// import axios from "axios";
+import axiosWithAuth from '../utils/axiosWithAuth';
 
 // class loginform extends Component {
 //   render() {
@@ -114,21 +115,18 @@ import axios from "axios";
 
 const AdminLogin = () => {
   const { handleSubmit, register, errors } = useForm();
-  const onSubmit = values => {
-    console.log(values);
-  };
 
-  useEffect(() => {
-    axios
-      .post("https://testing-refugee-stories.herokuapp.com/auth/login")
+  const handleLogin = values => {
+    axiosWithAuth()
+      .post("/login", values)
       .then(response => {
         console.log("success", response);
       })
       .catch(error => console.log(error.response));
-  }, []);
+  }
 
   return (
-    <form className="admin-login" onSubmit={handleSubmit(onSubmit)}>
+    <form className="admin-login" onSubmit={handleSubmit(handleLogin)}>
       <label htmlFor="username">Email: </label>
       <input
         name="username"

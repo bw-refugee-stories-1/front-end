@@ -2,10 +2,14 @@ import React from "react";
 import Caro from "./Carousel";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function HomePage() {
+const HomePage = props => {
   return (
     <div className="homePage">
       <Caro />
-    </div>
-  );
+      <h1>Home Page</h1>
+  </div>
+  )
+
 }
+
+export default HomePage;
