@@ -10,12 +10,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './index.scss';
 import App from './App';
 
-// TODO: Add devtools extension
+// TODO: Add detools extension
+const composeEnhancers =
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
   allReducers,
-  applyMiddleware(thunk)
-)
+  composeEnhancers(applyMiddleware(thunk))
+);
 
 ReactDOM.render(
   <Provider store={store}>
