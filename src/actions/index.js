@@ -3,6 +3,7 @@ import axios from 'axios';
 
 export const FETCH_START = 'FETCH_START';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+export const FETCH_BY_ID_SUCCESS = 'FETCH_BY_ID_SUCCESS';
 export const FETCH_FAILURE = 'FETCH_FAILURE';
 export const ADD_STORY = 'ADD_STORY';
 export const APPROVE_STORY = 'APPROVE_STORY';
@@ -14,10 +15,10 @@ export const getStories = () => dispatch => {
   // axiosWithAuth()
   //   .get('/users') // TODO: Check name
   axios
-    .get('http://localhost:3333/stories')
+    .get('https://testing-refugee-stories.herokuapp.com/stories')
     .then( response => {
       dispatch( {type: FETCH_SUCCESS, payload: response.data} );
-      console.log("Response from getStories: ", response.data);
+      console.log('Response from getStories: ', response.data);
     })
     .catch( err => {
       dispatch( {type: FETCH_FAILURE, payload: err});
@@ -25,9 +26,23 @@ export const getStories = () => dispatch => {
     })
   } 
 
+export const getStoryById = id => dispatch => {
+  dispatch( {type: FETCH_START} )
+  axios
+    .get(`https://testing-refugee-stories.herokuapp.com/stories/${id}`)
+    .then( response => {
+      dispatch( {type: FETCH_BY_ID_SUCCESS, payload: response.data} );
+      console.log('Response from getStoryById: ', response.data)
+    })
+    .catch( err => {
+      dispatch( {type: FETCH_FAILURE, payload: err} );
+      console.log('Error: ', err)
+    })
+}
+
 export const addStory = story => dispatch => {
-  axiosWithAuth()
-    .post('/stories', story) //TODO Check endpoint
+  axios
+    .post('https://testing-refugee-stories.herokuapp.com/stories/api/stories', story) //TODO Check endpoint
     .then( response => {
       console.log('Response from addStory: ', response.data);
       dispatch( {type: ADD_STORY, payload: response.data});
