@@ -1,5 +1,4 @@
 import axiosWithAuth from '../utils/axiosWithAuth';
-import axios from 'axios';
 
 export const FETCH_START = 'FETCH_START';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
@@ -7,14 +6,19 @@ export const FETCH_FAILURE = 'FETCH_FAILURE';
 export const ADD_STORY = 'ADD_STORY';
 export const APPROVE_STORY = 'APPROVE_STORY';
 export const REJECT_STORY = 'REJECT_STORY';
+export const LOGIN_START = 'LOGIN_START';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 
 export const getStories = () => dispatch => {
   dispatch( {type: FETCH_START} );
 
-  // axiosWithAuth()
-  //   .get('/users') // TODO: Check name
-  axios
-    .get('http://localhost:3333/stories')
+  // For localtesting when API is unavailable:
+  // axios
+  //   .get('http://localhost:3333/stories')
+  
+  axiosWithAuth()
+    .get('/users') // TODO: Check name
     .then( response => {
       dispatch( {type: FETCH_SUCCESS, payload: response.data} );
       console.log("Response from getStories: ", response.data);
@@ -49,10 +53,25 @@ export const rejectStory = id => dispatch => {
   axiosWithAuth()
     .delete(`/stories/${id}`)
     .then( response => {
-      console.log('Response from rejectStory: ', response.data)
-      dispatch( {type: REJECT_STORY, payload: response.data})
+      console.log('Response from rejectStory: ', response.data);
+      dispatch( {type: REJECT_STORY, payload: response.data});
     })
-    .catch(err => console.log('Error from deleteStory: ', err))
+    .catch(err => console.log('Error from deleteStory: ', err));
+}
+
+export const loginAdmin = credentials => dispatch => {
+  dispatch( {type: LOGIN_START, payload: credentials}) // Payload = creds
+  axiosWithAuth()
+  .post("/login", credentials)
+  .then(res => {
+    // Store token
+    localStorage.setItem("token", res.data.token);
+    dispatch( {type: LOGIN_SUCCESS}) // No payload
+  })
+  .catch(err => {
+    console.log("Error from Login:", err);
+    dispatch( {type: LOGIN_FAILURE, payload: err.data}) // Payload = err msg
+  })
 }
 
 // TODO: Move to new component
@@ -72,3 +91,4 @@ export const rejectStory = id => dispatch => {
 // }>Approve</button>
 
 // <button onClick={ () => rejectStory(story.id)}>Reject</button>
+
