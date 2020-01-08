@@ -15,7 +15,7 @@ const NavMenu = props => {
         <NavLink to="/">New Stories</NavLink>
         <NavLink to="/about">Edit Story</NavLink>
         <NavLink to="/login">Logout</NavLink>
-        <span onClick={logOut}></span>      
+        <span onClick={logOut}>Really Logout</span>      
       </nav>
     );
   } else { // Unauthenticated user

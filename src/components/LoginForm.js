@@ -1,5 +1,10 @@
-import React, { Component, useState, useEffect } from "react";
-import {
+import React from 'react';
+// { Component, useState, useEffect } from "react";
+import { connect } from 'react-redux';
+import { loginAdmin } from '../actions';
+import { useForm } from "react-hook-form";
+// import axiosWithAuth from '../utils/axiosWithAuth';
+/* import {
   Container,
   Col,
   Form,
@@ -7,10 +12,8 @@ import {
   Label,
   Input,
   Button
-} from "reactstrap";
-import { useForm } from "react-hook-form";
-// import axios from "axios";
-import axiosWithAuth from '../utils/axiosWithAuth';
+} from "reactstrap"; */
+
 
 // class loginform extends Component {
 //   render() {
@@ -113,16 +116,17 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 //   )
 // }
 
-const AdminLogin = () => {
+const AdminLogin = props => {
   const { handleSubmit, register, errors } = useForm();
 
   const handleLogin = values => {
-    axiosWithAuth()
-      .post("/login", values)
-      .then(response => {
-        console.log("success", response);
-      })
-      .catch(error => console.log("Error: ", error.response));
+    props.loginAdmin(values);
+    // axiosWithAuth()
+    //   .post("/login", values)
+    //   .then(response => {
+    //     console.log("success", response);
+    //   })
+    //   .catch(error => console.log("Error: ", error.response));
   }
 
   return (
@@ -156,5 +160,11 @@ const AdminLogin = () => {
   );
 };
 
-// export default loginform;
-export default AdminLogin;
+const mapStateToProps = state => {
+  return {
+
+  }
+}
+
+export default
+  connect (mapStateToProps, { loginAdmin })(AdminLogin);
