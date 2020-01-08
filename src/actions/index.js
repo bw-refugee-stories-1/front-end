@@ -41,8 +41,8 @@ export const getStoryById = id => dispatch => {
 }
 
 export const addStory = story => dispatch => {
-  axiosWithAuth()
-    .post('/stories', story) //TODO Check endpoint
+  axios
+    .post('https://testing-refugee-stories.herokuapp.com/stories/api/stories', story) //TODO Check endpoint
     .then( response => {
       console.log('Response from addStory: ', response.data);
       dispatch( {type: ADD_STORY, payload: response.data});
