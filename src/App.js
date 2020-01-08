@@ -12,6 +12,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import HomePage from './components/HomePage';
 import ReviewStories from './components/ReviewStories';
+import StoryList from './components/StoryList';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         <Route path="/signup" component={Signup} />
         <Route path="/" component={HomePage} /> {/* HomePage */}
       </Switch>
-      
+      <StoryList />
     </div>
   );
 }

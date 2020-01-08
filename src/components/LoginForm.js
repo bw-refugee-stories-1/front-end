@@ -138,7 +138,7 @@ const AdminLogin = () => {
           }
         })}
       />
-      {errors.email && errors.email.message}
+      {errors.username && errors.username.message}
 
       <label htmlFor="password">Password: </label>
       <input

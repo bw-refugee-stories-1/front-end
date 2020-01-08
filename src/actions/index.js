@@ -14,7 +14,7 @@ export const getStories = () => dispatch => {
   // axiosWithAuth()
   //   .get('/users') // TODO: Check name
   axios
-    .get('http://localhost:3333/stories')
+    .get('https://testing-refugee-stories.herokuapp.com/stories')
     .then( response => {
       dispatch( {type: FETCH_SUCCESS, payload: response.data} );
       console.log("Response from getStories: ", response.data);
