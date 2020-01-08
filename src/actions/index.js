@@ -42,7 +42,7 @@ export const getStoryById = id => dispatch => {
 
 export const addStory = story => dispatch => {
   axios
-    .post('https://testing-refugee-stories.herokuapp.com/stories/api/stories', story) //TODO Check endpoint
+    .post('https://testing-refugee-stories.herokuapp.com/stories/api/stories', story)
     .then( response => {
       console.log('Response from addStory: ', response.data);
       dispatch( {type: ADD_STORY, payload: response.data});
@@ -51,8 +51,8 @@ export const addStory = story => dispatch => {
 }
 
 export const approveStory = story => dispatch => {
-  axiosWithAuth()
-    .put(`/stories/${story.id}`, story)
+  axios
+    .put(` https://testing-refugee-stories.herokuapp.com/stories/api/story/${story.id}`, story)
     .then(response => {
       console.log('Response from approveStory: ', response.data)
       dispatch( {type: APPROVE_STORY, payload: response.data})
@@ -61,11 +61,11 @@ export const approveStory = story => dispatch => {
 }
 
 export const rejectStory = id => dispatch => {
-  axiosWithAuth()
-    .delete(`/stories/${id}`)
+  axios
+    .delete(` https://testing-refugee-stories.herokuapp.com/stories/api/delete/${id}`)
     .then( response => {
       console.log('Response from rejectStory: ', response.data)
-      dispatch( {type: REJECT_STORY, payload: response.data})
+      // dispatch( {type: REJECT_STORY, payload: response.data})
     })
     .catch(err => console.log('Error from deleteStory: ', err))
 }
