@@ -4,7 +4,7 @@ import {
   FETCH_FAILURE,
   ADD_STORY,
   APPROVE_STORY,
-  DELETE_STORY} from '../actions';
+  REJECT_STORY} from '../actions';
 
 const initialState = {
   stories: [],
@@ -22,7 +22,7 @@ export const storyReducer = (state = initialState, action) => {
     case FETCH_SUCCESS: 
       return {
         ...state,
-        stories: action.payload,
+        stories: [...state.stories, ...action.payload],
         isFetching: false
       }
     case FETCH_FAILURE:
@@ -34,21 +34,25 @@ export const storyReducer = (state = initialState, action) => {
     case ADD_STORY:
       return {
         ...state,
-        stories: [...stories, action.payload]
+        stories: [...state.stories, action.payload]
       }
     case APPROVE_STORY:
       return {
         ...state,
-        stories: stories.map( story => {
+        stories: state.stories.map( story => {
           return story.id === action.payload.id ? action.payload : story;
         })
       }
     case REJECT_STORY:
       return {
         ...state,
-        stories: stories.filter( story => {
+        stories: state.stories.filter( story => {
           return story.id !== action.payload
         })
+      }
+    default:
+      return {
+        ...state
       }
   }
 }

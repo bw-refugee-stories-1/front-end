@@ -1,4 +1,5 @@
 import axiosWithAuth from '../utils/axiosWithAuth';
+import axios from 'axios';
 
 export const FETCH_START = 'FETCH_START';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
@@ -10,8 +11,10 @@ export const REJECT_STORY = 'REJECT_STORY';
 export const getStories = () => dispatch => {
   dispatch( {type: FETCH_START} );
 
-  axiosWithAuth()
-    .get('/users') // TODO: Check name
+  // axiosWithAuth()
+  //   .get('/users') // TODO: Check name
+  axios
+    .get('http://localhost:3333/stories')
     .then( response => {
       dispatch( {type: FETCH_SUCCESS, payload: response.data} );
       console.log("Response from getStories: ", response.data);

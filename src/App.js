@@ -11,7 +11,7 @@ import Contact from './components/Contact.js';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import HomePage from './components/HomePage';
-import StoryRequests from './components/StoryRequests';
+import ReviewStories from './components/ReviewStories';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <h1>Refugee Stories</h1>
       { /* Default to list of stories, not: <SignUpForm /> */ }
       <Switch>
-        <Private path="/requests" component={StoryRequests} />
+        <Private path="/review" component={ReviewStories} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />

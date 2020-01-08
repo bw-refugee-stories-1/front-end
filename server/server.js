@@ -19,7 +19,7 @@ let stories = [
     author: 'Francisco Franco',
     id: 0,
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae efficitur erat, dictum laoreet turpis. Sed fringilla pharetra egestas. Ut ac blandit odio, nec malesuada est. Vestibulum finibus ipsum mauris, sit amet placerat nisl blandit vel. Phasellus tristique pulvinar ultrices. Suspendisse tincidunt sit amet odio eget commodo. Nunc commodo magna.',
-    approved: true
+    approved: false
   },
 
   {
@@ -37,7 +37,7 @@ let stories = [
     author: 'Herbert Hoover',
     id: 2,
     text: 'Lorem ipsum dolor sit amet fusce vitae efficitur erat, dictum laoreet turpis sed fringilla pharetra egestas. Ut ac blandit odio, nec malesuada est. Vestibulum finibus ipsum mauris, sit amet placerat nisl blandit vel. Phasellus tristique pulvinar ultrices. Suspendisse tincidunt sit amet odio eget commodo. Nunc commodo magna.',
-    approved: true
+    approved: false
   }
 ]
 
