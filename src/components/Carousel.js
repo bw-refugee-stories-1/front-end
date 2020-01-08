@@ -8,7 +8,8 @@ import {
 } from "reactstrap";
 
 const items = [
-  {
+  { 
+    //TODO: add first three images to the carousel
     id: 1,
     altText: "Slide 1",
     caption: "Slide 1"
@@ -71,6 +72,7 @@ const Caro = props => {
               max-width: 100%;
               height: 500px;
               background: black;
+              
               
             }`}
       </style>

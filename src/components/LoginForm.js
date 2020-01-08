@@ -142,7 +142,7 @@ const AdminLogin = props => {
           }
         })}
       />
-      {errors.email && errors.username.message}
+      {errors.username && errors.username.message}
 
       <label htmlFor="password">Password: </label>
       <input
