@@ -34,8 +34,12 @@ const StoryCard = props => {
               .slice(0, 10)
               .join(' ') + '...'}
           </CardText>
-          {/* button needs an onClick */}
-          <Button color="success">Read More</Button>{' '}
+          <Button 
+            color="success"
+            onClick={() => props.history.push(`/stories/${props.story.id}`)}
+          >
+            Read More
+          </Button>{' '}
         </CardBody>
       </Card>
     </div>

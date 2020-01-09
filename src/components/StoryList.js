@@ -15,7 +15,7 @@ function StoryList(props) {
     <div className="storyList">
       <div className="entry">
         {props.storyState.stories.map(story => {
-          return <StoryCard key={story.id} story={story} />;
+          return <StoryCard {...props} key={story.id} story={story} />;
         })}
       </div>
     </div>
