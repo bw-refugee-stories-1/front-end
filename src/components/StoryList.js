@@ -14,7 +14,7 @@ function StoryList(props) {
 
   return (
     <div className="storyList">
-      <Button color="secondary">Read More: </Button>
+      <Button>Read More: </Button>
       <div className="entry">
         {props.storyState.stories.map(story => {
           return <StoryCard key={story.id} story={story} />;
