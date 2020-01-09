@@ -119,14 +119,15 @@ import { useForm } from "react-hook-form";
 const AdminLogin = props => {
   const { handleSubmit, register, errors } = useForm();
 
+  console.log("AdminLogin props:", props);
+
   const handleLogin = values => {
     props.loginAdmin(values);
-    // axiosWithAuth()
-    //   .post("/login", values)
-    //   .then(response => {
-    //     console.log("success", response);
-    //   })
-    //   .catch(error => console.log("Error: ", error.response));
+    console.log("PUSHING:",localStorage.getItem("token"));
+    // props.history.push('/review'); // FIXME:
+    // push ('/about') works here.
+    // For some reason, we're not enabling private routes
+    // fast enough.
   }
 
   return (
@@ -162,7 +163,7 @@ const AdminLogin = props => {
 
 const mapStateToProps = state => {
   return {
-
+    // TODO: Fill this in or remove it.
   }
 }
 

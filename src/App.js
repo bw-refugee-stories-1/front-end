@@ -21,8 +21,7 @@ function App() {
         <p>[LOGO] Refugee Stories</p>
         <NavMenu />
       </header>
-      <h1>Refugee Stories</h1>
-      {/* Default to list of stories, not: <SignUpForm /> */}
+      <h2>Refugee Stories</h2>
       <Switch>
         <Private path="/review" component={ReviewStories} />
         <Route path="/about" component={About} />
@@ -30,7 +29,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route exact path="/" component={HomePage} />
-        {/* HomePage */}
+        {/* HomePage = default */}
       </Switch>
     </div>
   );

@@ -29,14 +29,134 @@ header {
     text-decoration: none;
   }
 
+  .nav-menu span {
+    cursor: pointer;
+  }
 
   p {
     padding: 0 1.5rem;
   }
 }
 
-nav {
-  @media screen and (max-width: $small) {
-    // Add hamburger menu
-  }
+// Hamburger
+/* 
+.menu-icon { // surrounds span of nav-icon
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+  user-select: none; // ?
 }
+.menu-icon .nav-icon { // One line of the hamburger
+  background: white;
+  display: block; // default is inline
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background .2s ease-out;
+}
+.menu-icon .nav-icon:before,
+.menu-icon .nav-icon:after { // Add hamburger layers
+  background: white;;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+}
+.menu-icon .nav-icon:before {
+  top: 5px;
+}
+.menu-icon .nav-icon:after { // Duplicate hamburger "layer"
+  top: -5px;
+}
+
+// Hide the checkbox (controlled by the hamburger)
+.menu-btn {
+  display: none;
+}
+
+// -- Animate hamburger to X when menu is opened --
+.menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+*/
+
+
+.menu-btn {
+  display: none;
+}
+
+
+
+
+
+  @media screen and (max-width: $small) {
+    // Hamburger
+    .menu-icon { // surrounds span of nav-icon
+      padding: 28px 20px;
+      position: relative;
+      float: right;
+      cursor: pointer;
+      user-select: none; // ?
+    }
+    .menu-icon .nav-icon { // One line of the hamburger
+      background: white;
+      display: block; // default is inline
+      height: 2px;
+      width: 18px;
+      position: relative;
+      transition: background .2s ease-out;
+    }
+    .menu-icon .nav-icon:before,
+    .menu-icon .nav-icon:after { // Add hamburger layers
+      background: white;;
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+    }
+    .menu-icon .nav-icon:before {
+      top: 5px;
+    }
+    .menu-icon .nav-icon:after { // Duplicate hamburger "layer"
+      top: -5px;
+    }
+
+    // Hide the checkbox (controlled by the hamburger)
+    .menu-btn {
+      display: none;
+    }
+
+    // -- Animate hamburger to X when menu is opened --
+    .menu-btn:checked ~ .menu {
+      max-height: 240px;
+    }
+
+    .menu-btn:checked ~ .menu-icon .nav-icon {
+      background: transparent;
+    }
+    .menu-btn:checked ~ .menu-icon .nav-icon:before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+    .menu-btn:checked ~ .menu-icon .nav-icon:after {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  }
