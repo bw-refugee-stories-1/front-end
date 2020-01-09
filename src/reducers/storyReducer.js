@@ -24,7 +24,7 @@ export const storyReducer = (state = initialState, action) => {
     case FETCH_SUCCESS: 
       return {
         ...state,
-        stories: [...state.stories, ...action.payload],
+        stories: action.payload,
         isFetching: false,
       }
     case FETCH_BY_ID_SUCCESS:
