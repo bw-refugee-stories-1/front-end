@@ -8,6 +8,11 @@ import ReactDOM from 'react-dom'
 import { connect } from 'react-redux';
 import { addStory } from '../actions';
 import * as yup from 'yup'
+import styled from 'styled-components'
+
+
+
+// trying to use styled components above****
 
 function Contact(props) {
   const { register, handleSubmit, errors } = useForm();
@@ -21,12 +26,21 @@ function Contact(props) {
 //****adding image should be img_url = name field MUST ADD - author not req - add min - tweet  */
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" placeholder="Author" name="author" ref={register({required: false, maxLength: 80})} />
-      <input type="email" placeholder="Email" name="email" ref={register({required: false, pattern: /^\S+@\S+$/i})} />
-      <input type="text" placeholder="Title" name="title" ref={register({required: true, min: 1, maxLength: 180})} />
-      <textarea name="text" ref={register({required: true, min: 240})} />
+      <div class="authorBox">
+      <input className="authorName" type="text" placeholder="Author" name="author" ref={register({required: false, maxLength: 80})} />
+      </div>
+      <div class="authorBox">
+      <input className="emailName" type="email" placeholder="Email" name="email" ref={register({required: false, pattern: /^\S+@\S+$/i})} />
+      </div>
+      <div class="authorBox">
+      <input className="titleName" type="text" placeholder="Title" name="title" ref={register({required: true, min: 1, maxLength: 180})} />
+      </div>
+      <div class="authorBox">
+      <textarea className="textName" name="text" ref={register({required: true, min: 240})} />
+      </div>
+      <div class="authorBox">
       <input type="url" placeholder="Attach an image" name="img_url" ref={register({required: false})}></input>
-
+      </div>
       
 
       <input type="submit" />
