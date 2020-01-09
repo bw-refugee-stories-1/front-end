@@ -12,7 +12,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import HomePage from './components/HomePage';
 import ReviewStories from './components/ReviewStories';
-import StoryList from './components/StoryList';
+import Story from './components/Story';
 
 function App() {
   return (
@@ -28,8 +28,15 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route exact path="/" component={HomePage} />
-        {/* HomePage = default */}
+        <Route 
+          path='/stories/:id'
+          render={ props => <Story {...props}/>}
+        />
+        <Route
+          exact
+          path="/"
+          render={ props => <HomePage {...props}/>} 
+        />
       </Switch>
     </div>
   );
