@@ -118,15 +118,12 @@ import { useForm } from 'react-hook-form';
 const AdminLogin = props => {
   const { handleSubmit, register, errors } = useForm();
 
+  console.log("AdminLogin props:", props);
+
   const handleLogin = values => {
     props.loginAdmin(values);
-    // axiosWithAuth()
-    //   .post("/login", values)
-    //   .then(response => {
-    //     console.log("success", response);
-    //   })
-    //   .catch(error => console.log("Error: ", error.response));
-  };
+    console.log("PUSHING:",localStorage.getItem("token"));
+  }
 
   return (
     <form
@@ -172,7 +169,9 @@ const AdminLogin = props => {
 };
 
 const mapStateToProps = state => {
-  return {};
-};
+  return {
+    // TODO: Fill this in or remove it.
+  }
+}
 
 export default connect(mapStateToProps, { loginAdmin })(AdminLogin);
