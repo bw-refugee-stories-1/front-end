@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import {
   Carousel,
   CarouselItem,
@@ -7,29 +8,41 @@ import {
   CarouselCaption,
 } from 'reactstrap';
 
-const items = [
-  {
-    //TODO: add first three images to the carousel
-    src: '',
-    id: 1,
-    altText: 'Slide 1',
-    caption: 'Slide 1',
-  },
-  {
-    src: '',
-    id: 2,
-    altText: 'Slide 2',
-    caption: 'Slide 2',
-  },
-  {
-    src: '',
-    id: 3,
-    altText: 'Slide 3',
-    caption: 'Slide 3',
-  },
-];
-
 const Caro = props => {
+
+  // const story = {...props.storyState.stories[1]};
+
+  // console.log('From Caro: ', story.img_url);
+  const approvedStories = props.storyState.stories.filter( story => story.approved === 'true');
+
+  const imgStories = [
+    {...approvedStories[0]},
+    {...approvedStories[1]},
+    {...approvedStories[2]}
+  ]
+
+  const items = [
+    {
+      //TODO: add first three images to the carousel
+      src: `${imgStories[0].img_url}`,
+      id: 1,
+      altText: 'Slide 1',
+      caption: 'Slide 1',
+    },
+    {
+      src: `${imgStories[1].img_url}`,
+      id: 2,
+      altText: 'Slide 2',
+      caption: 'Slide 2',
+    },
+    {
+      src: `${imgStories[2].img_url}`,
+      id: 3,
+      altText: 'Slide 3',
+      caption: 'Slide 3',
+    },
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -108,4 +121,12 @@ const Caro = props => {
   );
 };
 
-export default Caro;
+const mapStateToProps = state => {
+  return {
+    storyState: state.storyState,
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(Caro);
