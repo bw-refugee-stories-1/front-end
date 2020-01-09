@@ -19,7 +19,7 @@ const StoryCard = props => {
     props.story.img_url !== null ? props.story.img_url : imgArr[rand];
 
   return (
-    <div>
+    <div className="story-container">
       {/* <img
         src=""
         alt="Image from a refugee story"
