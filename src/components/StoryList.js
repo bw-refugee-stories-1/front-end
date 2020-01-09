@@ -29,5 +29,5 @@ const mapStateToProps = state => {
     storyState: state.storyState,
   };
 };
-
+//for the merge
 export default connect(mapStateToProps, { getStories })(StoryList);
