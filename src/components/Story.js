@@ -16,6 +16,7 @@ const Story = props => {
     <div className='story-container'>
       <h2>{story.title}</h2>
       <img src={story.img_url}/>
+      <p>{story.text}</p>
     </div>
   )
 }

@@ -68,8 +68,8 @@ export const rejectStory = id => dispatch => {
   axiosWithAuth()
     .delete(`/stories/api/delete/${id}`)
     .then( response => {
-      console.log('Response from rejectStory: ', response.data);
-      // dispatch( {type: REJECT_STORY, payload: response.data});
+      // console.log('Response from rejectStory: ', response.data);
+      dispatch( {type: REJECT_STORY, payload: response.data});
     })
     .catch(err => console.log('Error from deleteStory: ', err));
 }
