@@ -1,0 +1,31 @@
+.review-story-card {
+  border: 2px solid $greenpea;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  background-color: $bg-gallerygray;
+  width: 600px;
+
+  img {
+    height: 300px;
+  }
+}
+
+.review-stories-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 0px 5px;
+}
+
+.reject-button {
+  background-color: red;
+}
+
+.reject-button:hover {
+  background-color: salmon;
+  color: black;
+}
