@@ -41,16 +41,27 @@ h5 {
 }
 
 // Working with styles for the LoginForm/StoryCard below:
-.story-container {
-  border: 5px solid red;
-  display: flex;
-  width: 100%;
-}
-.mt-4 {
-  flex-wrap: wrap;
-  width: 30%;
 
-  
+// .storyList {
+//   display: flex;
+//   justify-content: space-evenly;
+//   border: 5px solid blue;
+
+// }
+
+.entry {
+  width: 100%;
+  margin: 0 auto;
+  border: 5px solid red;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mt-4 {
+  width: 45%;
+  border: 5px solid green;
 }
 
 button {
@@ -60,8 +71,8 @@ button {
   width: 164px;
   height: 44px;
   font-size: 18px;
+  margin-top: 10%;
 }
-
 
 button:hover {
   background-color: $bg-shadowgreen;
