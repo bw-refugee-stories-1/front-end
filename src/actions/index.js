@@ -81,7 +81,7 @@ export const loginAdmin = credentials => dispatch => {
   .then(res => {
     // Store token
     localStorage.setItem('token', res.data.token);
-    dispatch( {type: LOGIN_SUCCESS}) // No payload
+    dispatch( {type: LOGIN_SUCCESS, payload: {token: res.data.token }});
   })
   .catch(err => {
     console.log('Error from Login:', err);

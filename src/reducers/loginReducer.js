@@ -8,6 +8,7 @@ const initialState = {
   credentials: null,
   isFetching: false,
   error: '',
+  isLoggedIn: false,
 };
 
 export const loginReducer = (state = initialState, action) => {
@@ -22,14 +23,16 @@ export const loginReducer = (state = initialState, action) => {
       case LOGIN_SUCCESS:
         return {
           ...state,
-          isFetching: true,
           error: '',
+          isFetching: false,
+          isLoggedIn: true,
         }
       case LOGIN_FAILURE:
         return {
           ...state,
-          isFetching: true,
-          error: action.payload
+          error: action.payload,
+          isFetching: false,
+          isLoggedIn: false,
         }
       default:
         return state;

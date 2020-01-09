@@ -12,7 +12,6 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import HomePage from './components/HomePage';
 import ReviewStories from './components/ReviewStories';
-import StoryList from './components/StoryList';
 import Story from './components/Story';
 
 function App() {
@@ -22,8 +21,7 @@ function App() {
         <p>[LOGO] Refugee Stories</p>
         <NavMenu />
       </header>
-      <h1>Refugee Stories</h1>
-      {/* Default to list of stories, not: <SignUpForm /> */}
+      <h2>Refugee Stories</h2>
       <Switch>
         <Private path="/review" component={ReviewStories} />
         <Route path="/about" component={About} />
@@ -39,7 +37,6 @@ function App() {
           path="/"
           render={ props => <HomePage {...props}/>} 
         />
-        {/* HomePage */}
       </Switch>
     </div>
   );

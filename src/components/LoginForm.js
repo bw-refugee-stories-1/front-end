@@ -2,7 +2,7 @@ import React from 'react';
 // { Component, useState, useEffect } from "react";
 import { connect } from 'react-redux';
 import { loginAdmin } from '../actions';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 // import axiosWithAuth from '../utils/axiosWithAuth';
 /* import {
   Container,
@@ -13,7 +13,6 @@ import { useForm } from "react-hook-form";
   Input,
   Button
 } from "reactstrap"; */
-
 
 // class loginform extends Component {
 //   render() {
@@ -119,27 +118,27 @@ import { useForm } from "react-hook-form";
 const AdminLogin = props => {
   const { handleSubmit, register, errors } = useForm();
 
+  console.log("AdminLogin props:", props);
+
   const handleLogin = values => {
     props.loginAdmin(values);
-    // axiosWithAuth()
-    //   .post("/login", values)
-    //   .then(response => {
-    //     console.log("success", response);
-    //   })
-    //   .catch(error => console.log("Error: ", error.response));
+    console.log("PUSHING:",localStorage.getItem("token"));
   }
 
   return (
-    <form className="admin-login" onSubmit={handleSubmit(handleLogin)}>
+    <form
+      className="admin-login"
+      onSubmit={handleSubmit(handleLogin)}
+    >
       <label htmlFor="username">Email: </label>
       <input
         name="username"
         ref={register({
-          required: "Required",
+          required: 'Required',
           pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-            message: "invalid email address"
-          }
+            message: 'invalid email address',
+          },
         })}
       />
       {errors.username && errors.username.message}
@@ -148,23 +147,31 @@ const AdminLogin = props => {
       <input
         name="password"
         ref={register({
-          required: "Required",
-          message: "invalid password",
-          validate: value => value !== "admin" || "Nice try!"
+          required: 'Required',
+          message: 'invalid password',
+          validate: value => value !== 'admin' || 'Nice try!',
         })}
       />
       {errors.password && errors.password.message}
 
-      <button type="submit">Submit</button>
+      <button
+        style={{
+          marginTop: '5%',
+          position: 'relative',
+          marginLeft: '32%',
+        }}
+        type="submit"
+      >
+        Login
+      </button>
     </form>
   );
 };
 
 const mapStateToProps = state => {
   return {
-
+    // TODO: Fill this in or remove it.
   }
 }
 
-export default
-  connect (mapStateToProps, { loginAdmin })(AdminLogin);
+export default connect(mapStateToProps, { loginAdmin })(AdminLogin);
