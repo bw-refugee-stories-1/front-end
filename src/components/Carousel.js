@@ -26,20 +26,20 @@ const Caro = props => {
       //TODO: add first three images to the carousel
       src: `${imgStories[0].img_url}`,
       id: 1,
-      altText: 'Slide 1',
-      caption: 'Slide 1',
+      // altText: 'Slide 1',
+      // caption: 'Slide 1',
     },
     {
       src: `${imgStories[1].img_url}`,
       id: 2,
-      altText: 'Slide 2',
-      caption: 'Slide 2',
+      // altText: 'Slide 2',
+      // caption: 'Slide 2',
     },
     {
       src: `${imgStories[2].img_url}`,
       id: 3,
-      altText: 'Slide 3',
-      caption: 'Slide 3',
+      // altText: 'Slide 3',
+      // caption: 'Slide 3',
     },
   ];
 
