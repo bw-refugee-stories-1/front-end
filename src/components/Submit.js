@@ -35,7 +35,7 @@ function Contact(props) {
       <div class="authorBox">
       <input className="titleName" type="text" placeholder="Title" name="title" ref={register({required: true, min: 1, maxLength: 180})} />
       </div>
-      <div class="authorBox">
+      <div class="textAreaBox">
       <textarea className="textName" name="text" ref={register({required: true, min: 240})} />
       </div>
       <div class="authorBox">
@@ -58,6 +58,9 @@ export default connect(
   {addStory}
   )(Contact);
 
+  //** Tweaking text area default */
+
+  // <textarea class="textName" name="text" style="margin-top: 0px; margin-bottom: 10px; height: 83px;"></textarea>
 
 //  yup react form 
 
