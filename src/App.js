@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavMenu from './components/NavMenu';
 import About from './components/About';
-import Submit from './components/Contact.js';
+import Submit from './components/Submit.js';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import HomePage from './components/HomePage';
