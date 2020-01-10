@@ -15,10 +15,12 @@ const ReviewStories = props => {
   })
   
   return (
-    <div className='review-stories-list'>
-      {pendingStories.map( story => 
-        <ReviewStoryCard key={story.id} story={story}/>  
-      )}
+    <div className="container">
+      <div className='review-stories-list'>
+        {pendingStories.map( story => 
+          <ReviewStoryCard key={story.id} story={story}/>  
+        )}
+      </div>
     </div>
   );
 }

@@ -12,6 +12,7 @@ const AdminLogin = props => {
   }
 
   return (
+    <div className="container">
     <form
       className="admin-login"
       onSubmit={handleSubmit(handleLogin)}
@@ -53,6 +54,7 @@ const AdminLogin = props => {
       </button>
       <Link to='/signup'>Need an account? Sign up here!</Link>
     </form>
+    </div>
   );
 };
 

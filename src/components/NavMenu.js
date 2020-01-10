@@ -16,7 +16,7 @@ const NavMenu = props => {
         <ul>
           <li><NavLink to="/review">Review Stories</NavLink></li>
           <li><NavLink to="/about">Edit Story</NavLink></li>
-          <span onClick={logOut}>Logout</span>
+          <li><span onClick={logOut}>Logout</span></li>
         </ul>
       </header>
     );
@@ -32,7 +32,7 @@ const NavMenu = props => {
           <ul className="menu">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/contact">Submit Your Story</NavLink></li>
+            <li><NavLink to="/submit">Submit Your Story</NavLink></li>
             <li><NavLink to="/login">Admin Login</NavLink></li>
           </ul>
 
