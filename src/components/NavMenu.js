@@ -13,10 +13,10 @@ const NavMenu = props => {
         <NavLink to="/" className="logo">Refugee Stories</NavLink>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label className="menu-icon" htmlFor="menu-btn"><span className="nav-icon"></span></label>
-        <ul>
+        <ul className="menu">
           <li><NavLink to="/review">Review Stories</NavLink></li>
           <li><NavLink to="/about">Edit Story</NavLink></li>
-          <li><span onClick={logOut}>Logout</span></li>
+          <li><a name="blah" className="logout" onClick={logOut}>Logout</a></li>
         </ul>
       </header>
     );

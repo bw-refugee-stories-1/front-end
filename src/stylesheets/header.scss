@@ -9,7 +9,8 @@
   // margin-bottom: 50px;
 }
 
-.header a {
+.header a,
+.header li .logout {
   color: white;
   background: $greenpea;
 }
