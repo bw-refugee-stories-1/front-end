@@ -4,35 +4,39 @@ import { NavLink, withRouter } from 'react-router-dom';
 const NavMenu = props => {
   const logOut = () => {
     localStorage.clear();
-    setTimeout( props.history.push('/'), 10000 ); //FIXME
+    props.history.push('/');
   }
 
   if (localStorage.getItem('token')) { // We're logged in
     return (
-      <>
-        <nav className="nav-menu">
-          <NavLink to="/review">Review Stories</NavLink>
-          <NavLink to="/about">Edit Story</NavLink>
-          <span onClick={logOut}>Logout</span>      
-        </nav>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-      </>
+      <header className="header">
+        <NavLink to="/" className="logo">Refugee Stories</NavLink>
+        <input className="menu-btn" type="checkbox" id="menu-btn" />
+        <label className="menu-icon" htmlFor="menu-btn"><span className="nav-icon"></span></label>
+        <ul className="menu">
+          <li><NavLink to="/review">Review Stories</NavLink></li>
+          <li><NavLink to="/about">Edit Story</NavLink></li>
+          <li><a name="blah" className="logout" onClick={logOut}>Logout</a></li>
+        </ul>
+      </header>
     );
   } else { // Unauthenticated user
     // TODO: Add: "Submit your story"
     // STRETCH: Add page to "Get Involved"
     return (
-      <>
-        <nav className="nav-menu">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/login">Admin Login</NavLink>
-        </nav>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-        </>
+      <header className="header">
+        
+          <NavLink to="/" className="logo">Refugee Stories</NavLink>
+          <input className="menu-btn" type="checkbox" id="menu-btn" />
+          <label className="menu-icon" htmlFor="menu-btn"><span className="nav-icon"></span></label>
+          <ul className="menu">
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/submit">Submit Your Story</NavLink></li>
+            <li><NavLink to="/login">Admin Login</NavLink></li>
+          </ul>
+
+      </header>
     );
   }
 }
