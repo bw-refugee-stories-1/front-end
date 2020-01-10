@@ -17,10 +17,7 @@ import Story from './components/Story';
 function App() {
   return (
     <div className="App">
-      <header>
-        <p>[LOGO] Refugee Stories</p>
         <NavMenu />
-      </header>
       <h2>Refugee Stories</h2>
       <Switch>
         <Private path="/review" component={ReviewStories} />
