@@ -25,7 +25,7 @@ function Contact(props) {
 
 //****adding image should be img_url = name field MUST ADD - author not req - add min - tweet  */
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="formSubmit" onSubmit={handleSubmit(onSubmit)}>
       <div class="authorBox">
       <input className="authorName" type="text" placeholder="Author" name="author" ref={register({required: false, maxLength: 80})} />
       </div>
@@ -39,7 +39,7 @@ function Contact(props) {
       <textarea className="textName" name="text" ref={register({required: true, min: 240})} />
       </div>
       <div class="authorBox">
-      <input type="url" placeholder="Attach an image" name="img_url" ref={register({required: false})}></input>
+      <input className="imageBox" type="url" placeholder="Add an image URL address" name="img_url" ref={register({required: false})}></input>
       </div>
       
 
