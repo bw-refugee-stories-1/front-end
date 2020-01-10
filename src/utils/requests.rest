@@ -6,3 +6,7 @@ content-type: application/json
   "email": "kelly@kelly.com",
   "password": "admin"
 }
+
+###
+
+GET https://testing-refugee-stories.herokuapp.com/stories
