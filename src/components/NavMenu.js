@@ -16,7 +16,7 @@ const NavMenu = props => {
         <ul>
           <li><NavLink to="/review">Review Stories</NavLink></li>
           <li><NavLink to="/about">Edit Story</NavLink></li>
-          <span onClick={logOut}>Logout</span>
+          <li><span onClick={logOut}>Logout</span></li>
         </ul>
       </header>
     );

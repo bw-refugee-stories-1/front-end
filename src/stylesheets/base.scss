@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+.App {
+  height: 100vh;
+}
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -11,7 +15,7 @@ body {
 h1 {
   // TODO: Header size?
   font-size: 2.1rem;
-  margin-top: 10rem;
+  // margin-top: 10rem;
 }
 h2 {
   // TODO: Header size?
@@ -29,6 +33,7 @@ h1 {
 }
 h2 {
   font-size: 6rem;
+  padding-top: 80px;
 }
 h3 {
   font-size: 4.8rem;
@@ -88,10 +93,18 @@ button:active {
   display: flex;
   flex-direction: column;
   width: 500px;
-  padding: 30px;
+  // padding-top: 30px;
+  padding: 50px;
   background: #e5e5e5;
-  margin: 50px auto;
+  // margin: 200px 0 0 0;
+  // margin: 0px auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 // Blake is testing some styling below
