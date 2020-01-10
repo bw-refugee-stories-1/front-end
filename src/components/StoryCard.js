@@ -20,23 +20,25 @@ const StoryCard = props => {
 
   return (
     <div className="mt-4">
-      {/* <img
-        src=""
+      {/* <img 
+        src="" 10-4
         alt="Image from a refugee story"
       /> */}
-      <Card>
+      <Card className="mt-4">
         <CardImg top width="100%" src={imgSrc} alt="Card image cap" />
-        <CardBody>
-          <CardText>
+        <CardBody >
+          <CardText className="story-text">
             {props.story.text
               .split('.')[0]
               .split(' ')
-              .slice(0, 10)
+              .slice(0, 20)
               .join(' ') + '...'}
           </CardText>
-          <Button 
+          <Button
             color="success"
-            onClick={() => props.history.push(`/stories/${props.story.id}`)}
+            onClick={() =>
+              props.history.push(`/stories/${props.story.id}`)
+            }
           >
             Read More
           </Button>{' '}
