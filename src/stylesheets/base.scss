@@ -74,7 +74,7 @@ div.card {
   flex-wrap: wrap;
   width: 45%;
   // border: 5px solid green;
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
   0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
@@ -84,6 +84,7 @@ div.card {
 .story-text {
   text-align: center;
   padding: 10px 20px;
+}
 
 button {
   background-color: $greenpea;

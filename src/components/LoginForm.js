@@ -37,6 +37,7 @@ const AdminLogin = props => {
         ref={register({
           required: 'Required',
           message: 'invalid password',
+          minLength: 8,
           validate: value => value !== 'admin' || 'Nice try!',
         })}
       />

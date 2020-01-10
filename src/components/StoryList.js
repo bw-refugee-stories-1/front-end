@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import axios from "axios";
 import StoryCard from './StoryCard';
 import { connect } from 'react-redux';
 import { getStories } from '../actions';
