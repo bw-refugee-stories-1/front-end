@@ -2,49 +2,70 @@
     border: 2px solid #17644a;
     border-radius: 5px;
     color: #E04F56;
-    width: 29%;
+    width: 49%;
     height: 20px;
     margin-bottom: 10px;
     padding: 10px;
+    font-weight: bold;
+    // padding-top: 20px;
 }
 
+.authorBox {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.formSubmit {
+    // border: solid 3px rgb(255, 17, 148);
+    width: 600px;
+    margin: auto;
+    padding-top: 50px;
+}
 .emailName {
     border: 2px solid #17644a;
     border-radius: 5px;
     color: #E04F56;
-    width: 29%;
+    width: 49%;
     height: 20px;
     margin-bottom: 10px;
     padding: 10px;
+    font-weight: bold;
 }
 
 .titleName {
     border: 2px solid #17644a;
     border-radius: 5px;
     color: #E04F56;
-    width: 29%;
+    width: 49%;
     height: 20px;
     margin-bottom: 10px;
     padding: 10px;
+    font-weight: bold;
 }
 
 .textName {
     border: 2px solid #17644a;
     border-radius: 5px;
     color: #E04F56;
-    width: 29%;
+    width: 79%;
     height: 83px;
     margin-bottom: 10px;
     padding: 10px;
 }
-.authorBox {
-    margin: 0 auto;
-    // border: solid red 2px;
-    border-radius: 105px;
-    padding: 15px;
-    width: 90%;
-    height: 110px;
+
+.imageBox {
+    border: 2px solid #17644a;
+    border-radius: 5px;
+    color: #E04F56;
+    width: 49%;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight: bold;
 }
+
 
 // .textAreaBox {
 //     margin-top: 0px; 
