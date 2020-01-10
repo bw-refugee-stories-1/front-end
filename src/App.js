@@ -18,7 +18,6 @@ function App() {
   return (
     <div className="App">
         <NavMenu />
-      <h2>Refugee Stories</h2>
       <Switch>
         <Private path="/review" component={ReviewStories} />
         <Route path="/about" component={About} />

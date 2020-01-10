@@ -11,8 +11,8 @@ const NavMenu = props => {
     return (
       <header className="header">
         <NavLink to="/" className="logo">Refugee Stories</NavLink>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <input className="menu-btn" type="checkbox" id="menu-btn" />
+        <label className="menu-icon" htmlFor="menu-btn"><span className="nav-icon"></span></label>
         <ul>
           <li><NavLink to="/review">Review Stories</NavLink></li>
           <li><NavLink to="/about">Edit Story</NavLink></li>
@@ -26,13 +26,13 @@ const NavMenu = props => {
     return (
       <header className="header">
         
-          <NavLink to="/" className="logo">LOGO</NavLink>
-          <input class="menu-btn" type="checkbox" id="menu-btn" />
-          <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+          <NavLink to="/" className="logo">Refugee Stories</NavLink>
+          <input className="menu-btn" type="checkbox" id="menu-btn" />
+          <label className="menu-icon" htmlFor="menu-btn"><span className="nav-icon"></span></label>
           <ul className="menu">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
+            <li><NavLink to="/contact">Submit Your Story</NavLink></li>
             <li><NavLink to="/login">Admin Login</NavLink></li>
           </ul>
 
