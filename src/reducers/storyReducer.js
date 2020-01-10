@@ -63,13 +63,3 @@ export const storyReducer = (state = initialState, action) => {
       }
   }
 }
-
-// const story = {
-//   author: '', //optional
-//   email: '',
-//   title: '', //optional
-//   text: '',
-//   id: '',
-//   approved: false,
-// }
-
