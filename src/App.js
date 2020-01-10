@@ -17,21 +17,21 @@ import Story from './components/Story';
 function App() {
   return (
     <div className="App">
-        <NavMenu />
+      <NavMenu />
       <Switch>
         <Private path="/review" component={ReviewStories} />
         <Route path="/about" component={About} />
         <Route path="/submit" component={Submit} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route 
-          path='/stories/:id'
-          render={ props => <Story {...props}/>}
+        <Route
+          path="/stories/:id"
+          render={props => <Story {...props} />}
         />
         <Route
           exact
           path="/"
-          render={ props => <HomePage {...props}/>} 
+          render={props => <HomePage {...props} />}
         />
       </Switch>
     </div>
