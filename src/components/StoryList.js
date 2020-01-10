@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import axios from "axios";
 import StoryCard from './StoryCard';
 import { connect } from 'react-redux';
 import { getStories } from '../actions';
@@ -15,7 +14,11 @@ function StoryList(props) {
     <div className="storyList">
       <div className="entry">
         {props.storyState.stories.map(story => {
-          return <StoryCard {...props} key={story.id} story={story} />;
+          return (
+            story.approved === 'true' && (
+              <StoryCard {...props} key={story.id} story={story} />
+            )
+          );
         })}
       </div>
     </div>

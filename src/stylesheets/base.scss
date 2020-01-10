@@ -57,16 +57,27 @@ h5 {
 .entry {
   width: 100%;
   margin: 0 auto;
-  // border: 5px solid red;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .mt-4 {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
   width: 45%;
-  // border: 5px solid green;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.story-text {
+  text-align: center;
+  padding: 10px 20px;
 }
 
 button {
