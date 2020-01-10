@@ -32,7 +32,7 @@ const NavMenu = props => {
           <ul className="menu">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/contact">Submit Your Story</NavLink></li>
+            <li><NavLink to="/submit">Submit Your Story</NavLink></li>
             <li><NavLink to="/login">Admin Login</NavLink></li>
           </ul>
 
