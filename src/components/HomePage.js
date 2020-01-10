@@ -7,7 +7,7 @@ const HomePage = props => {
     <div className="homePage">
       <Caro />
       <h2>Read Our Stories</h2>
-      <StoryList {...props}/>
+      <StoryList {...props} />
     </div>
   );
 };

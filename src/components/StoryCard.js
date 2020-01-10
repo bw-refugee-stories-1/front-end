@@ -19,14 +19,14 @@ const StoryCard = props => {
     props.story.img_url !== null ? props.story.img_url : imgArr[rand];
 
   return (
-    <div className="mt-4">
+    <div>
       {/* <img 
         src="" 10-4
         alt="Image from a refugee story"
       /> */}
       <Card className="mt-4">
         <CardImg top width="100%" src={imgSrc} alt="Card image cap" />
-        <CardBody >
+        <CardBody>
           <CardText className="story-text">
             {props.story.text
               .split('.')[0]
