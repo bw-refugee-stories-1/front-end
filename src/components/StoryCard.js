@@ -6,13 +6,13 @@ import { Button } from 'reactstrap';
 const StoryCard = props => {
   //random number generator between 0 and 4
   const rand = Math.floor(Math.random() * 5);
-
+  console.log('image', props.story.id.img_url);
   const imgArr = [
-    '../images/refugeePicture1.jpg',
-    '../images/refugeePicture2.jpg',
-    '../images/refugeePicture3.jpg',
-    '../images/refugeePicture4.jpg',
-    '../images/refugeePicture5.jpg',
+    'https://unsplash.com/photos/9XT1_6wFTpY',
+    'https://unsplash.com/photos/9XT1_6wFTpY',
+    'https://unsplash.com/photos/9XT1_6wFTpY',
+    'https://unsplash.com/photos/9XT1_6wFTpY',
+    'https://unsplash.com/photos/9XT1_6wFTpY',
   ];
   // TODO: check for the null value when getting images to see if the value actually is "null"
   const imgSrc =
