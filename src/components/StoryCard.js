@@ -8,11 +8,11 @@ const StoryCard = props => {
   const rand = Math.floor(Math.random() * 5);
   console.log('image', props.story.id.img_url);
   const imgArr = [
-    'https://unsplash.com/photos/9XT1_6wFTpY',
-    'https://unsplash.com/photos/9XT1_6wFTpY',
-    'https://unsplash.com/photos/9XT1_6wFTpY',
-    'https://unsplash.com/photos/9XT1_6wFTpY',
-    'https://unsplash.com/photos/9XT1_6wFTpY',
+    'https://images.unsplash.com/photo-1554428122-c2ca1f2cb88c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80',
+    'https://images.unsplash.com/photo-1529441435232-e28880548c25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    'https://images.unsplash.com/photo-1551556729-c8dee4337009?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+    'https://images.unsplash.com/photo-1526817575615-3685e135615d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1288&q=80',
+    'https://images.unsplash.com/photo-1559173525-71a8abaaba32?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80',
   ];
   // TODO: check for the null value when getting images to see if the value actually is "null"
   const imgSrc =
