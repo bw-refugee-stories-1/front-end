@@ -7,9 +7,17 @@ const ReviewStoryCard = props => {
     <div className='review-story-card'>
       <h3>{props.story.title}</h3>
       <img src={props.story.img_url}/>
-      <p>{props.story.author}</p>
+      <p className='author-text'>{props.story.author}</p>
       <p>{props.story.text}</p>
       <div className='review-buttons'>
+        <button
+          className='reject-button'
+          onClick={ () => {
+            props.rejectStory(props.story.id);
+          }}
+        >
+          Reject
+        </button>
         <button 
           onClick={() => {
             const updatedStory = {
@@ -20,14 +28,6 @@ const ReviewStoryCard = props => {
           }}
         >
           Approve
-        </button>
-        <button
-          className='reject-button'
-          onClick={ () => {
-            props.rejectStory(props.story.id);
-          }}
-        >
-          Reject
         </button>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Caro from './Carousel';
 import StoryList from './StoryList';
-// import "bootstrap/dist/css/bootstrap.min.css";
 
 const HomePage = props => {
   return (

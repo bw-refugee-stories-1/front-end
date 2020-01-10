@@ -13,16 +13,11 @@ export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 
 export const getStories = () => dispatch => {
   dispatch( {type: FETCH_START} );
-
-  // For localtesting when API is unavailable:
-  // axios
-  //   .get('http://localhost:3333/stories')
   
   axiosWithAuth()
-    .get('/stories') // TODO: Check name
+    .get('/stories')
     .then( response => {
       dispatch( {type: FETCH_SUCCESS, payload: response.data} );
-      // console.log('Response from getStories: ', response.data);
     })
     .catch( err => {
       dispatch( {type: FETCH_FAILURE, payload: err});
@@ -36,7 +31,6 @@ export const getStoryById = id => dispatch => {
     .get(`/stories/${id}`)
     .then( response => {
       dispatch( {type: FETCH_BY_ID_SUCCESS, payload: response.data} );
-      // console.log('Response from getStoryById: ', response.data)
     })
     .catch( err => {
       dispatch( {type: FETCH_FAILURE, payload: err} );
@@ -48,7 +42,6 @@ export const addStory = story => dispatch => {
   axiosWithAuth()
     .post('/stories/api/stories', story)
     .then( response => {
-      // console.log('Response from addStory: ', response.data);
       dispatch( {type: ADD_STORY, payload: response.data});
     })
     .catch(err => console.log('Error from addStory: ', err))
@@ -58,7 +51,6 @@ export const approveStory = story => dispatch => {
   axiosWithAuth()
     .put(`/stories/api/story/${story.id}`, story)
     .then(response => {
-      // console.log('Response from approveStory: ', response.data)
       dispatch( {type: APPROVE_STORY, payload: response.data})
     })
     .catch(err => console.log('Error from approveStory: ', err))
@@ -68,7 +60,6 @@ export const rejectStory = id => dispatch => {
   axiosWithAuth()
     .delete(`/stories/api/delete/${id}`)
     .then( response => {
-      // console.log('Response from rejectStory: ', response.data);
       dispatch( {type: REJECT_STORY, payload: response.data});
     })
     .catch(err => console.log('Error from deleteStory: ', err));
