@@ -8,9 +8,9 @@ const Login = props => {
 
   if(loggedIn) return < Redirect to="/review" />
   return (
-    <>
+    <div className="container">
       <LoginForm history={props.history} />
-    </>
+    </div>
   )
 
 }

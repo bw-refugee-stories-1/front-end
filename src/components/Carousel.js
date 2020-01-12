@@ -83,12 +83,12 @@ const Caro = props => {
       </CarouselItem>
     );
   });
-
-  return (
+  // TODO: Move style to scss? -DJ
+  return ( // The main returned carousel item
     <div>
       <style>
         {`.custom-tag {
-              max-width: 100%;
+              width: 100%; 
               height: 500px;
               background: black;
               
