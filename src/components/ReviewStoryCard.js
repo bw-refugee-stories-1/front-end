@@ -6,7 +6,7 @@ const ReviewStoryCard = props => {
   return (
     <div className="review-story-card">
       <h3>{props.story.title}</h3>
-      <img src={props.story.img_url} />
+      <img src={props.story.img_url} alt="Immigrant" />
       <p className="author-text">{props.story.author}</p>
       <p>{props.story.text}</p>
       <div className="review-buttons">

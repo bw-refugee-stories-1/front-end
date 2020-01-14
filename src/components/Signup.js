@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import { useForm } from 'react-hook-form';
 import LoginForm from './LoginForm';
@@ -18,11 +18,12 @@ const Signup = props => {
 
   return (
     <div className="container">
+      <div className="container">{/* FIXME: Hacked to act like login form */}
       <form
-        className="admin-login"
-        onSubmit={handleSubmit(handleSignup)}
+      className="admin-login"
+      onSubmit={handleSubmit(handleSignup)}
       >
-        <h2>Sign up</h2>
+        <h3>Sign up</h3>
         <label htmlFor="username">Email: </label>
         <input
           name="username"
@@ -59,6 +60,7 @@ const Signup = props => {
           Sign up
         </button>
       </form>
+      </div>
     </div>
   );
 };

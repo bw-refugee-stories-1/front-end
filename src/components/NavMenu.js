@@ -15,13 +15,11 @@ const NavMenu = props => {
         <label className="menu-icon" htmlFor="menu-btn"><span className="nav-icon"></span></label>
         <ul className="menu">
           <li><NavLink to="/review">Review Stories</NavLink></li>
-          <li><NavLink to="/about">Edit Story</NavLink></li>
           <li><a name="blah" className="logout" onClick={logOut}>Logout</a></li>
         </ul>
       </header>
     );
   } else { // Unauthenticated user
-    // TODO: Add: "Submit your story"
     // STRETCH: Add page to "Get Involved"
     return (
       <header className="header">
