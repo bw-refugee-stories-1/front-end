@@ -1,12 +1,49 @@
 
+### Get a list of all the stories
+GET https://testing-refugee-stories.herokuapp.com/stories
 
-POST https://testing-refugee-stories.herokuapp.com/auth/login HTTP/1.1
+### Get a specific story
+GET https://testing-refugee-stories.herokuapp.com/stories/2
+
+### Create an account
+POST https://testing-refugee-stories.herokuapp.com/auth/register HTTP/1.1
 content-type: application/json
+
 {
-  "email": "kelly@kelly.com",
-  "password": "admin"
+  "username": "jim@bob.com",
+  "password": "email"
 }
 
-###
+### Log in
+POST https://testing-refugee-stories.herokuapp.com/auth/login HTTP/1.1
+content-type: application/json
 
-GET https://testing-refugee-stories.herokuapp.com/stories
+{
+  "username": "jim@bob.com",
+  "password": "email"
+}
+
+### Modify a field
+PUT https://testing-refugee-stories.herokuapp.com/stories/api/story/2
+content-type: application/json
+
+{
+  "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Lauryn_Hill_-_2014.jpg/800px-Lauryn_Hill_-_2014.jpg",
+  "author": "Lauryn Hill",
+  "email": "lauryn@the90s.com",
+  "title": "Here I Come",
+  "text": "I play my enemies like a game of chess\nWhere I rest, no stress, if you don't smoke sess\nLest I must confess, my destiny's manifest\nIn some Goretex and sweats, I make tracks like I'm homeless\nRap orgies with Porgy and Bess\nCapture your bounty, like Elliot Ness, yes\nBless you if you represent the Fu",
+  "approved": "true"
+}
+
+### Post a new story
+POST https://testing-refugee-stories.herokuapp.com/stories/api/stories
+content-type: application/json
+
+{
+  "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Lauryn_Hill_-_2014.jpg/800px-Lauryn_Hill_-_2014.jpg",
+  "author": "Chuck Norris",
+  "email": "chuck@norris.com",
+  "title": "Kung-Futon Discount",
+  "text": "Fighting on discount (yet versatile) furniture"
+}
